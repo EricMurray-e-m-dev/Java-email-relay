@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: email-relay-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/emailrelay
+    username: emailrelay_user
+    password: dev_password_123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.emdev.emailrelay: DEBUG
